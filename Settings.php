@@ -23,9 +23,9 @@ class Settings {
 		$this->debug_mode = true;
 		$this->log_file_path = '/nsa/logfile.log';
 		$this->send_notifications = false;
-	}
+	}	
 
-    // All vars initialized to defaults
+	// All vars initialized to defaults
 	public function __construct() {
 		$this->loadDefaults();
 	}
