@@ -2,6 +2,8 @@
 // Maxim VT
 // maxeeem@gmail.com
 
+include 'Extensions.php';
+
 class Settings {
 	public $host;
 	public $server_id;
@@ -67,7 +69,7 @@ class Settings {
 				$value = strtolower($value); // to allow for things like True or YES
 				if (in_array($value, ['true', 'yes', 'on'])) {
 					$value = 1;
-				} elseif (in_array($value, ['false', 'no', 'off'])) {
+				} elseif (ze($value)->isOneOf(['false', 'no', 'off'])) {
 					$value = 0;
 				} else {
 					// invalid boolean
