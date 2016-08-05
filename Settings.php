@@ -3,15 +3,15 @@
 // maxeeem@gmail.com
 
 class Settings {
-    public $host;
-    public $server_id;
-    public $server_load_alarm;
-    public $user;
-    public $verbose;
-    public $test_mode;
-    public $debug_mode;
-    public $log_file_path;
-    public $send_notifications;
+	public $host;
+	public $server_id;
+	public $server_load_alarm;
+	public $user;
+	public $verbose;
+	public $test_mode;
+	public $debug_mode;
+	public $log_file_path;
+	public $send_notifications;
 	
 	public function loadDefaults() {
 		$this->host = 'default.com';
@@ -30,9 +30,9 @@ class Settings {
 		$this->loadDefaults();
 	}
 
-    // Load settings from file
-    // returns bool indicating success
-    public function loadSettingsFromFile($path) {
+	// Load settings from file
+	// returns bool indicating success
+	public function loadSettingsFromFile($path) {
 		$source = fopen($path, 'r');
 		
 		if ($source === false) {
@@ -85,7 +85,7 @@ class Settings {
 		
 		fclose($source);
 
-        return true;
-    }
+		return true;
+	}
 }
 ?>
