@@ -69,7 +69,7 @@ class Settings {
 				$value = strtolower($value); // to allow for things like True or YES
 				if (in_array($value, ['true', 'yes', 'on'])) {
 					$value = 1;
-				} elseif (ze($value)->isOneOf(['false', 'no', 'off'])) {
+				} elseif (ze($value)->isOneOf(['false', 'no', 'off', 'zero', 'zilch', 'nada'])) {
 					$value = 0;
 				} else {
 					// invalid boolean
